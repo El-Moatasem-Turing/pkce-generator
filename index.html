@@ -30,7 +30,7 @@
     function submit() {
       var code_verifier = document.getElementById("code_verifier").value
       var code_challenge = generateCodeChallenge(code_verifier)
-      document.getElementById("code_challenge").value = code_challenge
+      document.getElementById("code_challenge").value = CryptoJS.SHA256(code_verifier)
     }
   </script>
 </head>
